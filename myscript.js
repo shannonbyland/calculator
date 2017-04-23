@@ -1,5 +1,4 @@
 var a;
-var sum = document.getElementbyId("sum");
 var result;
 var b;
 
@@ -37,18 +36,16 @@ function div() {
   var displayResult = document.getElementById("result");
   displayResult.innerHTML = result
 }
-
+//Clear button
 function clear() {
-  //get clear button to work
-  var a = document.getElementById("a");
-  var b = document.getElementById("b");
-  var result = document.getElementById("result");
-  a.innerHTML = "";
-  b.innerHTML = "";
-  result.innerText = "";
+  a = document.getElementById("a");
+  b = document.getElementById("b");
+  var displayResult = document.getElementById("result");
+  a.value = "";
+  b.value = "";
+  displayResult.innerHTML = "";
 }
-
-// prevent dividing by 0
-if (document.getElementById("b") === 0) {
-
-}
+var clearButton = document.getElementById('clear');
+clearButton.addEventListener("click", function() {
+  clear();
+});
